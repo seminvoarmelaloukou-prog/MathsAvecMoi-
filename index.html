@@ -27,15 +27,15 @@
   </head>
   <body>
 
-    <nav>
-      <h1>📐 MathsAvecMoi</h1>
-      <ul>
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Épreuves</a></li>
-        <li><a href="#">Vidéos</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
+<nav>
+  <h1>📐 MathsAvecMoi</h1>
+  <ul>
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="#niveaux">Épreuves</a></li>
+    <li><a href="#videos">Vidéos</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
 
     <header>
       <h2>Révise tes maths facilement !</h2>
@@ -43,18 +43,8 @@
       <a href="#">Commencer maintenant</a>
     </header>
 
-    <section>
-      <h2>Choisis ton niveau</h2>
-      <div class="niveaux">
-        <div class="carte" onclick="window.location.href='6eme.html'">6ème</div>
-        <div class="carte" onclick="window.location.href='5eme.html'">5ème</div>
-        <div class="carte" onclick="window.location.href='4eme.html'">4ème</div>
-        <div class="carte" onclick="window.location.href='3eme.html'">3ème</div>
-      </div>
-    </section>
-
-  <section>
-      <h2>🎥 Vidéos d'exercices</h2>
+<section id="niveaux">
+  <h2>Choisis ton niveau</h2>
       <div class="contenus">
         <div class="bloc" style="width:100%;">
           <h3>6ème - Les fractions</h3>
@@ -131,7 +121,19 @@
     });
   });
 </script>
-
+<section id="videos">
+  <h2>🎥 Vidéos d'exercices</h2>
+  <div class="contenus">
+    <div class="bloc" style="width:100%;">
+      <h3>6ème - Les fractions</h3>
+      <iframe 
+        width="100%" 
+        height="200" 
+        src="https://www.youtube.com/embed/n0-Jh1Vs-L0"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
   </body>
-</html></body>
 </html>
