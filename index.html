@@ -27,24 +27,34 @@
   </head>
   <body>
 
-<nav>
-  <h1>📐 MathsAvecMoi</h1>
-  <ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="#niveaux">Épreuves</a></li>
-    <li><a href="#videos">Vidéos</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+    <nav>
+      <h1>📐 MathsAvecMoi</h1>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="#niveaux">Épreuves</a></li>
+        <li><a href="#videos">Vidéos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
     <header>
       <h2>Révise tes maths facilement !</h2>
       <p>Des épreuves et des vidéos pour les collégiens de la 6ème à la 3ème.</p>
-      <a href="#">Commencer maintenant</a>
+      <a href="#niveaux">Commencer maintenant</a>
     </header>
 
-<section id="niveaux">
-  <h2>Choisis ton niveau</h2>
+    <section id="niveaux">
+      <h2>Choisis ton niveau</h2>
+      <div class="niveaux">
+        <div class="carte" onclick="window.location.href='6eme.html'">6ème</div>
+        <div class="carte" onclick="window.location.href='5eme.html'">5ème</div>
+        <div class="carte" onclick="window.location.href='4eme.html'">4ème</div>
+        <div class="carte" onclick="window.location.href='3eme.html'">3ème</div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <h2>🎥 Vidéos d'exercices</h2>
       <div class="contenus">
         <div class="bloc" style="width:100%;">
           <h3>6ème - Les fractions</h3>
@@ -57,6 +67,7 @@
         </div>
       </div>
     </section>
+
     <section>
       <h2>Que trouves-tu ici ?</h2>
       <div class="contenus">
@@ -75,65 +86,5 @@
       <p>© 2026 MathsAvecMoi.fr — Tous droits réservés</p>
     </footer>
 
-  <footer>
-      <p>© 2026 MathsAvecMoi.fr — Tous droits réservés</p>
-    </footer>
-
-    <!-- AJOUTE ICI 👇 -->
-<script>
-  // Les épreuves par niveau
-  const epreuves = {
-    "6ème": ["Devoir 1 - Les fractions", "Devoir 2 - La géométrie", "Devoir 3 - Les décimaux"],
-    "5ème": ["Devoir 1 - Les proportions", "Devoir 2 - Les angles", "Devoir 3 - Les puissances", "Devoir 4 - 2ème Série DS 2nd Semestre"],
-    "4ème": ["Devoir 1 - Les équations", "Devoir 2 - Le théorème de Pythagore", "Devoir 3 - Les statistiques", "Devoir 4 - 2ème Série DS 2nd Semestre"],
-    "3ème": ["Devoir 1 - Les fonctions", "Devoir 2 - La trigonométrie", "Devoir 3 - Les probabilités"]
-  };
-
-  // Ajouter une zone d'affichage sous les cartes
-  const section = document.querySelector(".niveaux");
-  const zone = document.createElement("div");
-  zone.id = "liste-epreuves";
-  zone.style.marginTop = "20px";
-  zone.style.textAlign = "left";
-  zone.style.background = "white";
-  zone.style.borderRadius = "10px";
-  zone.style.padding = "15px";
-  zone.style.display = "none";
-  section.after(zone);
-
-  // Clic sur les cartes
-  const cartes = document.querySelectorAll(".carte");
-  cartes.forEach(function(carte) {
-    carte.addEventListener("click", function() {
-      const niveau = carte.textContent;
-      const liste = epreuves[niveau];
-
-      zone.style.display = "block";
-
-      liste.forEach(function(devoir) {
-        zone.innerHTML += "<p style='padding:8px 0; border-bottom:1px solid #eee;'>📝 " + devoir + 
-(devoir.includes("Devoir 4") && niveau === "4ème" ?
-" <a href='https://drive.google.com/uc?export=download&id=1aoYlj3ztwjKRnT8PjaadS46rS8FrQlCb' style='color:#f39c12; font-weight:bold;'>⬇️ Télécharger</a>"
-: devoir.includes("Devoir 4") && niveau === "5ème" ?
-" <a href='https://drive.google.com/file/d/1auyq2MT0qNKs_Kr5wHv2MKtM2bJNpoLV/view' style='color:#f39c12; font-weight:bold;'>⬇️ Télécharger</a>"
-: "") + "</p>";
-      });
-    });
-  });
-</script>
-<section id="videos">
-  <h2>🎥 Vidéos d'exercices</h2>
-  <div class="contenus">
-    <div class="bloc" style="width:100%;">
-      <h3>6ème - Les fractions</h3>
-      <iframe 
-        width="100%" 
-        height="200" 
-        src="https://www.youtube.com/embed/n0-Jh1Vs-L0"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </div>
-</section>
   </body>
 </html>
